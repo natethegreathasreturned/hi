@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/jh.css">
+</head>
+<body>
+  <script src="js/h.js"></script>
+  <div class="container">
+    <div class="navbar">
+    <div>
+      <nav>
+        <li><a href="index.html">Media Remotes</a></li>
+        <li><a href="mr.html">Controllers</a></li>
+        <li><a href="cr.html">VR</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+       </nav>
+    </div> 
+   </div> 
+  </div> 
+  <h1 style="background-color: highlight;">Contact Us</h1>
+    <fieldset>
+    <form class="name" class="contact_form" action="#">
+      <input type="hidden" name="_subject" value="New email!">
+      <input class="email" name="email" placeholder="Email Adress" required>
+      <input class="text" name="name" placeholder="Name" required>
+      <textarea class="msg" cols="5" rows="5" placeholder="Write your message here"></textarea>
+      <button type="submit">Send</button>
+      <h3>send</h3>
+ </form>
+
+ <script src="https://smtpjs.com/v3/smtp.js"></script>
+ 
+<script>
+  const form = document.querySelector('.contact_form')
+
+//function to send the message when click on button send
+function sendMsg(e){
+  e.preventDefault();
+     const name = document.querySelector('.name'),
+        email = document.querySelector('.email'),
+        msg = document.querySelector('.msg');
+
+
+   // Function Send Email ... 
+   Email.send({
+  SecureToken : "83a17087-fd68-43dc-a627-ab6d46337613",
+  To : 'dogs8774@gmail.com',
+  From : "email.value",
+  Subject : "Contact Form",
+  Body : msg.value
+  }).then(
+message => alert(message)
+);
+}
+
+ //add the event Listenr submit
+ form.addEventListener('submit', sendMsg);
+
+
+</script>
+
+</body>
+</html>

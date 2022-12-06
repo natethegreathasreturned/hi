@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR</title>
+    <link rel="stylesheet" href="css/s.css">
+    <link rel="icon" href="images/ps.webp">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="images/pslogo.png" class="logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">Game Controllers</a></li>
+                    <li><a href="cr.html">VR</a></li>
+                    <li><a href="mr.html">Media Remotes</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <img src="images/lines.png" class="menu-icon" width="100px"
+             onclick="togglemenu()">
+        </div>
+
+          <div class="row">
+              <div class="col-1">
+                   <h2>Playstation Remote</h2>
+                   <h3>Wireless Playstation Media Remotes</h3>
+                   <p>(Compatible/Generic)
+                   </p>
+                   <h4><s>$230.00</s> $159.09</h4>
+                   <a href="you.html">
+                    <a href="you3.html">
+                   <button type="button">Buy Now <img src="images/arrow.png">
+                   </button>
+                   </a>
+              </div>
+              <div class="col-2">
+                  <img src="images/media remote.jpg" class="controller">
+                  <div class="color-box"></div>
+                  <div class="add-btn">
+                    <img src="images/add.png">
+                    <p><small>Add To Cart</small></p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="social-links">
+            <img src="images/fb.png">
+            <img src="images/tw.png">
+            <img src="images/ig.png">
+          </div>
+
+
+    </div>
+      
+      <script>
+          
+            var  menuList =  document.getElementById("menuList");
+            
+            menuList.style.maxHeight = "0px";
+
+            function togglemenu(){
+
+               if( menuList.style.maxHeight == "0px")
+               {
+                   menuList.style.maxHeight = "130px";
+               }
+            else
+                {
+                    menuList.style.maxHeight = "0px";
+                }   
+
+            }
+        
+      </script>
+
+</body>
+</html>
